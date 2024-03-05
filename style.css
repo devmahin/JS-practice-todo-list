@@ -1,0 +1,40 @@
+#headers{
+    display: flex;
+    justify-content: center;
+}
+.todoInput{
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.todoButton{
+    background-color: red;
+    color: white;
+    padding: 0px 20px;
+    font-size: 20px;
+    
+}
+.todoAppWidth{
+    width: 500px;
+    background-color: rebeccapurple;
+    padding: 10px;
+    margin: 0 auto;
+}
+header{
+    margin-bottom: 50px;
+}
+.todoList{
+    display: flex;
+    justify-content: space-between;
+    background-color: greenyellow;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.todoList li{
+    list-style: none;
+}
+.delete:hover{
+    padding: 10px;
+    background-color: red;
+}
