@@ -84,3 +84,24 @@ displayshowfunGetFun()
 // }
 
 
+
+const deleteTodo = document.querySelectorAll(".delete");
+for (let d of deleteTodo) {
+    d.addEventListener("click", (d) => {
+        let clicks = d.target.parentNode.parentNode;
+        let clickValue = d.target.parentNode.parentNode.children
+        deleteLocalStores(clickValue[1].innerText)
+        // console.log(clicks)
+        clicks.remove()
+    })
+}
+
+function deleteLocalStores(clickVal) {
+    let gets = localStorage.getItem("todo")
+    let getParse = JSON.parse(gets)
+    delete getParse[clickVal]
+
+    localStorage.removeItem("todo")
+    localStorage.setItem("todo", JSON.stringify(getParse))
+    
+}
